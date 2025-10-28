@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+.venv/
+
+# API credentials and sensitive files
+credentials.py
+service_account.json
+
+# Generated data files (CSV, etc.) - these should be output to Sheets, not committed to Git
+*.csv
+
+# IDE specific files
+.vscode/
+__pycache__/
+*.pyc
+
+# Operating System files
+.DS_Store
+Thumbs.db
