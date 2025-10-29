@@ -32,12 +32,12 @@ This module successfully established the core data collection and notification i
 3.  **Google Sheets Integration (Performance Metrics Storage):**
     *   Developed a robust `upload_to_sheets.py` utility that automatically connects to Google Sheets using a service account.
     *   All extracted data from Twitter, YouTube, Reddit, and Google Trends is automatically uploaded and organized into dedicated worksheets within a central Google Sheet (`AI_Content_Optimizer_Data`). This ensures a centralized, accessible, and auto-updating repository for performance metrics.
-    *   **Link to Google Sheet:** [Your Google Sheet Link Here] (e.g., `https://docs.google.com/spreadsheets/d/1AAd.../edit`) - **Remember to replace this with your actual sheet's shareable link.**
-
+    *   **Link to Google Sheet:** [https://docs.google.com/spreadsheets/d/1aAdsgz9AagAOxkRSoxdaIaJ6N76U8G1xb4mPC-_h5HE/edit?usp=sharing]
 4.  **Slack Integration (Team Collaborations):**
     *   Integrated with Slack using Incoming Webhooks to send automated notifications about data collection status, detected trends, or other critical updates to a designated Slack channel.
     *   Enables real-time communication and alerts for the marketing team.
     *   **Example Notification:** `Urgent: New trending product detected on YouTube! Check the 'YouTube_Product_Content' sheet.`
+    *   **Slack Invite link:** [https://join.slack.com/t/infosysspring-7m32270/shared_invite/zt-3h12ctq9c-DSZkMIDzuFazAGsZf3_DFw]
 
 ---
 
@@ -91,7 +91,7 @@ To set up and run the data extraction pipeline:
 5.  **Configure Google Sheet:**
     *   Ensure your Google Sheet named `AI_Content_Optimizer_Data` exists.
     *   Share this sheet with the email address of your Google Cloud service account.
-    *   **Link to Google Sheet for viewing:** [Your Google Sheet Link Here]
+    *   **Link to Google Sheet for viewing:** [https://docs.google.com/spreadsheets/d/1aAdsgz9AagAOxkRSoxdaIaJ6N76U8G1xb4mPC-_h5HE/edit?usp=sharing]
 6.  **Configure Slack Webhook:**
     *   Set up an Incoming Webhook in your Slack workspace.
     *   Paste the webhook URL into `credentials.py` as `SLACK_WEBHOOK_URL`.
@@ -117,4 +117,6 @@ To set up and run the data extraction pipeline:
 ---
 
 ### **Author**
-[Your Name] - [Your LinkedIn Profile (Optional)] - [Your Infosys Springboard ID (Optional)]
+Harpreet Singh
+
+LinkedIn Profile : [https://www.linkedin.com/in/harpreet-singh-4baa7626a]
