@@ -56,16 +56,27 @@ This module successfully established the core data collection and notification i
 The repository is organized as follows:
 
 AI-Content-Optimizer/
+
 ├── credentials.py.example # Example for storing API keys (DO NOT COMMIT real credentials)
+
 ├── service_account.json.example# Example for Google Service Account (DO NOT COMMIT real .json)
+
 ├── slack_notifier.py # Module for sending Slack notifications
+
 ├── upload_to_sheets.py # Utility for uploading DataFrames to Google Sheets
+
 ├── twitter_data_extractor.py # Script to extract data from Twitter/X
+
 ├── youtube_data_extractor.py # Script to extract data from YouTube
+
 ├── reddit_data_extractor.py # Script to extract data from Reddit
+
 ├── google_trends_extractor.py # Script to extract data from Google Trends
+
 ├── main_pipeline.py # (Optional/Future) A master script to run all extractors sequentially
+
 └── README.md # This file
+
 └── .gitignore # Specifies files to ignore (credentials, venv, generated CSVs)
 
 ---
