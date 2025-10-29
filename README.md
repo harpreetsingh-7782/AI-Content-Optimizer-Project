@@ -38,6 +38,16 @@ This module successfully established the core data collection and notification i
     *   Enables real-time communication and alerts for the marketing team.
     *   **Example Notification:** `Urgent: New trending product detected on YouTube! Check the 'YouTube_Product_Content' sheet.`
     *   **Slack Invite link:** [https://join.slack.com/t/infosysspring-7m32270/shared_invite/zt-3h12ctq9c-DSZkMIDzuFazAGsZf3_DFw]
+  
+5. **Run Data Extractors:**
+    You can run each extractor individually:
+    ```bash
+    python twitter_data_extractor.py
+    python youtube_data_extractor.py
+    python reddit_data_extractor.py
+    python google_trends_extractor.py
+    ```
+    Each script will collect data, save it locally as a CSV, and then upload it to the designated worksheets in your `AI_Content_Optimizer_Data` Google Sheet, sending Slack notifications where configured.
 
 ---
 
@@ -57,53 +67,6 @@ AI-Content-Optimizer/
 ├── main_pipeline.py # (Optional/Future) A master script to run all extractors sequentially
 └── README.md # This file
 └── .gitignore # Specifies files to ignore (credentials, venv, generated CSVs)
-
----
-
-### **Setup and Running (Module 1)**
-
-To set up and run the data extraction pipeline:
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/[YOUR_GITHUB_USERNAME]/AI-Based-Automated-Content-Marketing-Optimizer.git
-    cd AI-Based-Automated-Content-Marketing-Optimizer
-    ```
-2.  **Create a Python Virtual Environment:**
-    ```bash
-    python -m venv venv
-    # On Windows:
-    .\venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
-    ```
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(You'll need to create a `requirements.txt` file first - see below)*
-4.  **Set up `credentials.py` and `service_account.json`:**
-    *   Rename `credentials.py.example` to `credentials.py`.
-    *   Fill in your actual API keys for Twitter, YouTube, and Reddit in `credentials.py`.
-    *   Rename `service_account.json.example` to `service_account.json`.
-    *   Place your actual Google Cloud service account JSON key in `service_account.json`.
-    *   **Crucially, these files are NOT committed to GitHub for security reasons (they are in `.gitignore`).**
-5.  **Configure Google Sheet:**
-    *   Ensure your Google Sheet named `AI_Content_Optimizer_Data` exists.
-    *   Share this sheet with the email address of your Google Cloud service account.
-    *   **Link to Google Sheet for viewing:** [https://docs.google.com/spreadsheets/d/1aAdsgz9AagAOxkRSoxdaIaJ6N76U8G1xb4mPC-_h5HE/edit?usp=sharing]
-6.  **Configure Slack Webhook:**
-    *   Set up an Incoming Webhook in your Slack workspace.
-    *   Paste the webhook URL into `credentials.py` as `SLACK_WEBHOOK_URL`.
-7.  **Run Data Extractors:**
-    You can run each extractor individually:
-    ```bash
-    python twitter_data_extractor.py
-    python youtube_data_extractor.py
-    python reddit_data_extractor.py
-    python google_trends_extractor.py
-    ```
-    Each script will collect data, save it locally as a CSV, and then upload it to the designated worksheets in your `AI_Content_Optimizer_Data` Google Sheet, sending Slack notifications where configured.
 
 ---
 
