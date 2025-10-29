@@ -57,27 +57,27 @@ The repository is organized as follows:
 
 AI-Content-Optimizer/
 
-├── credentials.py.example # Example for storing API keys (DO NOT COMMIT real credentials)
+├── .gitignore                          # Specifies files and directories to be ignored by Git.
 
-├── service_account.json.example# Example for Google Service Account (DO NOT COMMIT real .json)
+├── README.md                           # This comprehensive project overview.
 
-├── slack_notifier.py # Module for sending Slack notifications
+├── requirements.txt                    # Lists all Python package dependencies.
 
-├── upload_to_sheets.py # Utility for uploading DataFrames to Google Sheets
+├── credentials.py.example              # Example file for API keys.
 
-├── twitter_data_extractor.py # Script to extract data from Twitter/X
+├── service_account.json.example        # Example file for Google Service Account credentials.
 
-├── youtube_data_extractor.py # Script to extract data from YouTube
+├── slack_notifier.py                   # Module for sending Slack notifications.
 
-├── reddit_data_extractor.py # Script to extract data from Reddit
+├── upload_to_sheets.py                 # Utility for uploading DataFrames to Google Sheets.
 
-├── google_trends_extractor.py # Script to extract data from Google Trends
+├── google_trends_extractor.py          # Script for extracting data from Google Trends.
 
-├── main_pipeline.py # (Optional/Future) A master script to run all extractors sequentially
+├── reddit_data_extractor.py            # Script for collecting posts from Reddit.
 
-└── README.md # This file
+├── twitter_data_extractor.py           # Script for fetching data from Twitter/X.
 
-└── .gitignore # Specifies files to ignore (credentials, venv, generated CSVs)
+└── youtube_data_extractor.py           # Script for extracting data from YouTube.
 
 ---
 
