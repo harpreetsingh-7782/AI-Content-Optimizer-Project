@@ -59,7 +59,9 @@ AI-Content-Optimizer/
 ├── credentials.py.example # Example for storing API keys (DO NOT COMMIT real credentials)
 ├── service_account.json.example# Example for Google Service Account (DO NOT COMMIT real .json)
 ├── slack_notifier.py # Module for sending Slack notifications
+
 ├── upload_to_sheets.py # Utility for uploading DataFrames to Google Sheets
+
 ├── twitter_data_extractor.py # Script to extract data from Twitter/X
 ├── youtube_data_extractor.py # Script to extract data from YouTube
 ├── reddit_data_extractor.py # Script to extract data from Reddit
