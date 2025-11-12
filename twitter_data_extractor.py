@@ -160,4 +160,18 @@ if __name__ == "__main__":
         print("\nNo product marketing tweets found or an error occurred during extraction.")
     print("\n--- Product Marketing Tweet Extraction Complete ---")
 
-from slack_notifier import send_slack_notification
+    # --- Slack Notification Integration ---
+    from slack_notifier import send_slack_notification
+
+    if send_slack_notification:
+        slack_message = (
+            f":sparkles: New Twitter product marketing tweets found! :twitter:\n"
+            f"Extracted {len(product_tweets_df)} unique product-related Twitter tweets.\n"
+            f"Check the Google Sheet here: https://docs.google.com/spreadsheets/d/1aAdsgz9AagAOxkRSoxdaIaJ6N76U8G1xb4mPC-_h5HE/edit?usp=sharing\n" # IMPORTANT: Replace with actual link
+            f"Worksheet: AI_Content_Optimizer_Data\n"
+            f"Check: Twitter_Product_Content worksheet for the details."
+        )
+        send_slack_notification(slack_message)
+    else:
+        print("Slack notification function not available.")
+    

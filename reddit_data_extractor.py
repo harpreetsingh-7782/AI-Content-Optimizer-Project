@@ -154,4 +154,19 @@ if __name__ == "__main__":
     
     print("\n--- Reddit Product Marketing Data Extraction Complete ---")
 
-from slack_notifier import send_slack_notification
+    # --- Slack Notification Integration ---
+    from slack_notifier import send_slack_notification
+
+    if send_slack_notification:
+        slack_message = (
+            f":sparkles: New Reddit product marketing posts found! :reddit:\n"
+            f"Extracted {len(reddit_posts_df)} unique product-related Reddit posts.\n"
+            f"Check the Google Sheet here: https://docs.google.com/spreadsheets/d/1aAdsgz9AagAOxkRSoxdaIaJ6N76U8G1xb4mPC-_h5HE/edit?usp=sharing\n" # IMPORTANT: Replace with actual link
+            f"Worksheet: AI_Content_Optimizer_Data\n"
+            f"Check: Reddit_Product_Content worksheet for the details."
+        )
+        send_slack_notification(slack_message)
+
+    else:
+        print("Slack notification function not available.")
+    
