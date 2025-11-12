@@ -1,6 +1,6 @@
 # AI-Based Automated Content Marketing Optimizer
 
-## Infosys Springboard Internship 6.0 Project - Module 1
+## Infosys Springboard Internship 6.0 Project - Module 1-2
 
 ### Project Title
 AI Based Automated Content Marketing Optimizer
