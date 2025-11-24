@@ -67,8 +67,28 @@ This module successfully established the core data collection and notification i
     *   **Integrated content generation with Google Sheets for structured data logging (`upload_to_sheets.py`).**
     *   **Enabled real-time team collaboration updates via Slack notifications upon new content generation (`slack_notifier.py`).**
     *   *Initial exploration of optimization algorithms and data utilization completed; further development deferred to Module 3.*
+   
+## Module 3: Weeks 5-6 - Sentiment Analysis System & Performance Metrics Hub
+*Objective:* Develop analysis and metrics systems for content insights, audience feedback, and automated reporting.
+*Description:* This module transformed raw and generated content into actionable intelligence by analyzing audience sentiment and establishing a robust performance tracking and alerting system.
+**Key Features:**
+*   **Data Cleaning & Optimization (`data_optimizer.py`):**
+    *   Implemented robust text preprocessing including URL, mention, and hashtag removal.
+    *   Stop word removal and optional stemming for improved keyword and theme extraction.
+    *   Updates Google Sheets with cleaned versions of original content columns.
+    *   Extracts data-driven insights (top keywords, popular themes) from across all platforms.
+*   **Sentiment Analysis (`sentiment_analyzer.py`):**
+    *   Integrated NLTK's VADER for sentiment analysis of social media text (tweets, video titles, Reddit posts/selftext).
+    *   Automatically calculates and stores `sentiment_label` (Positive/Negative/Neutral) and `sentiment_score` in Google Sheets.
+*   **Performance Metrics Hub (`performance_metrics_hub.py`):**
+    *   Generates comprehensive sentiment reports (average score, distribution, top positive/negative examples).
+    *   **Automated Slack Alerts:** Proactively monitors for critical negative sentiment spikes based on configurable thresholds.
+    *   **Automated Slack Reports:** Periodically sends summary reports to designated marketing channels.
+*   **Enhanced Google Sheets Handler (`google_sheets_handler.py`):** Centralized and improved utility for seamless reading and writing of DataFrames to Google Sheets, including error handling and retries.
+**Files/Scripts:** `data_optimizer.py`, `sentiment_analyzer.py`, `performance_metrics_hub.py`, `google_sheets_handler.py` (renamed and enhanced)
 
-### **Project Structure (Module 1-2)**
+---
+### **Project Structure (Module 1-3)**
 
 The repository is organized as follows:
 
@@ -86,7 +106,7 @@ AI-Content-Optimizer/
 
 ├── slack_notifier.py                   # Module for sending Slack notifications.
 
-├── upload_to_sheets.py                 # Utility for uploading DataFrames to Google Sheets.
+├── google_sheets_handler.py            # Module for handling Google Sheets operations.
 
 ├── check_gemini_models.py              # Utility script to check available Gemini models. (Optional, if you created this)
 
@@ -98,17 +118,26 @@ AI-Content-Optimizer/
 
 ├── twitter_data_extractor.py           # Script for fetching data from Twitter/X.
 
-└── youtube_data_extractor.py           # Script for extracting data from YouTube.
+├── youtube_data_extractor.py           # Script for extracting data from YouTube.
+
+├── data_optimizer.py                       # Module for cleaning and optimizing raw content data.
+
+├── sentiment_analyzer.py                   # Module for analyzing sentiment of social media content.
+
+└──  performance_metrics_hub.py             # Module for tracking and alerting on content performance metrics.
 
 ---
-
-### **Next Steps (Beyond Module 1-2)**
-*   **Content Optimization & A/B Testing:** Developing logic to suggest content variations and predict viral potential.
-*   **Predictive Analytics for Viral Potential:** Utilize machine learning models, trained on historical content performance, sentiment, and trend data, to predict the viral potential and overall campaign performance of new content variations.
+## Future Work (Module 4)
+*   Predictive Analytics for Viral Potential
+*   Automated A/B Testing Framework
+*   Advanced Content Recommendation Engine
+*   Refinement of LLM Content Generation based on sentiment and performance feedback.
 
 ---
-
 ### **Author**
 Harpreet Singh
 
 LinkedIn Profile : [https://www.linkedin.com/in/harpreet-singh-4baa7626a]
+
+---
+*Built as part of Infosys Springboard Internship 6.0*
