@@ -74,7 +74,7 @@ The repository is organized as follows:
 
 AI-Content-Optimizer/
 
-├── .gitignore        A                  # Specifies files and directories to be ignored by Git.
+├── .gitignore                          # Specifies files and directories to be ignored by Git.
 
 ├── README.md                           # This comprehensive project overview.
 
